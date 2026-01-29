@@ -13,5 +13,5 @@ export default defineConfig({
 		tailwindcss(),
 		react(),
 	],
-	base: '/dive-buddy-2',
+	base: '/dive-buddy-2/',
 })
