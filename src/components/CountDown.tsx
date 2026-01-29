@@ -22,7 +22,7 @@ const CountDown = ({ setsTime, onComplete }: CountDownProps) => {
 	}, [setsTime])
 
 	useEffect(() => {
-		let interval: string | number | NodeJS.Timeout | undefined
+		let interval: number | undefined
 		if (isRunning) {
 			interval = setInterval(() => {
 				setRepTime((prev) => prev - 10)

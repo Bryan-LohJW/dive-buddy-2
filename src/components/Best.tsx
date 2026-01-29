@@ -20,7 +20,7 @@ const Best = ({ records, addRecord }: BestProps) => {
 	const [isRunning, setIsRunning] = useState(false)
 
 	useEffect(() => {
-		let interval: string | number | NodeJS.Timeout | undefined
+		let interval: number | undefined
 		if (isRunning) {
 			interval = setInterval(() => setTime((time) => time + 10), 10)
 		} else {

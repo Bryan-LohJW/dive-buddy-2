@@ -30,13 +30,13 @@ type CloseButtonProps = {
 	closeFunction: () => void
 }
 
-type SetTimeProps = {
-	title: string
-	titleStyle: string
-	time: string
-	timeStyle: string
-	hasRecord: boolean
-}
+// type SetTimeProps = {
+// 	title: string
+// 	titleStyle: string
+// 	time: string
+// 	timeStyle: string
+// 	hasRecord: boolean
+// }
 
 type TrainingProps = {
 	title: string
@@ -63,25 +63,25 @@ const CloseButton: FC<CloseButtonProps> = ({ closeFunction }) => {
 	)
 }
 
-const SetTime: FC<SetTimeProps> = ({
-	title,
-	titleStyle,
-	time,
-	timeStyle,
-	hasRecord,
-}) => {
-	return (
-		<div className="mb-5">
-			<h3 className={`${titleStyle}`}>{title}</h3>
-			<p className={`${timeStyle}`}>
-				Time - {time}{' '}
-				{hasRecord
-					? `Time - ${time}`
-					: `Log a record to start training`}
-			</p>
-		</div>
-	)
-}
+// const SetTime: FC<SetTimeProps> = ({
+// 	title,
+// 	titleStyle,
+// 	time,
+// 	timeStyle,
+// 	hasRecord,
+// }) => {
+// 	return (
+// 		<div className="mb-5">
+// 			<h3 className={`${titleStyle}`}>{title}</h3>
+// 			<p className={`${timeStyle}`}>
+// 				Time - {time}{' '}
+// 				{hasRecord
+// 					? `Time - ${time}`
+// 					: `Log a record to start training`}
+// 			</p>
+// 		</div>
+// 	)
+// }
 
 const uploadTraining = (training: {
 	type: TrainingTypeValue
