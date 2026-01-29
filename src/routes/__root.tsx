@@ -3,7 +3,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 const RootLayout = () => (
 	<>
-		<div className="max-h-270 max-w-80 border-4 box-content">
+		<div className="h-160 max-w-80 overflow-hidden border-4 box-content relative">
 			<Outlet />
 			<TanStackRouterDevtools />
 		</div>

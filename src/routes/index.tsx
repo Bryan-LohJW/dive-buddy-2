@@ -1,13 +1,13 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useEffect } from 'react'
 import diveBuddyIcon from '/public/assets/dive-logo.png'
-import googleSignIn from '/public/assets/btn_google_signin_light_normal_web@2x.png'
 
 export const Route = createFileRoute('/')({
 	component: Index,
 })
 
 function Index() {
+	const navigate = useNavigate()
 	useEffect(() => {
 		const user = localStorage.getItem('user')
 		if (user) {
@@ -16,7 +16,7 @@ function Index() {
 	}, [])
 
 	return (
-		<div className="h-full w-full flex-col overflow-y-hidden bg-secondary">
+		<div className="h-full h-160 w-full flex-col overflow-y-hidden bg-secondary">
 			<div className={`relative h-[calc(100%-10rem)] p-5`}>
 				<h1 className="relative top-[20%] text-center text-4xl font-bold text-primary">
 					Dive Buddy
@@ -35,7 +35,9 @@ function Index() {
 				<button
 					className="w-48 border-2 h-12 rounded-lg font-extrabold text-l"
 					onClick={() => {
-						alert('Not implemented yet!')
+						navigate({
+							to: '/home',
+						})
 					}}
 				>
 					Start
